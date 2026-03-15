@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)file:///C:/Sublime%20Text%203/Mehandi/Project1.html# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henna Artistry - Beautiful Mehendi Designs</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #b76e79;
+            --secondary-color: #f8e9e9;
+            --accent-color: #d4a59a;
+        }
+        
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #fff9f9;
+            color: #333;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(183, 110, 121, 0.8), rgba(183, 110, 121, 0.8)), 
+                        url('https://images.unsplash.com/photo-1596704017256-e06a536d3451') center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .mehendi-card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .mehendi-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .mehendi-card img {
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .floral-divider {
+            text-align: center;
+            margin: 40px 0;
+            color: var(--primary-color);
+        }
+        
+        .floral-divider i {
+            margin: 0 10px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #9c5d66;
+            border-color: #9c5d66;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        /* Services/Pricing Section Styles */
+.card-header {
+    border-radius: 0 !important;
+}
+
+.card {
+    transition: transform 0.3s;
+    border-radius: 10px !important;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Gallery Section Styles */
+.gallery-item {
+    position: relative;
+    transition: all 0.3s ease;
+    height: 250px;
+}
+
+.gallery-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(183, 110, 121, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: white;
+    font-size: 2rem;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal-content {
+    background: transparent;
+    border: none;
+}
+
+.modal-header {
+    border: none;
+    justify-content: flex-end;
+}
+
+.btn-close {
+    background-color: white;
+    opacity: 1;
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#" id="siteName">Henna Mehandi Artistry</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#designs">Designs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#views">Views</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section animate__animated animate__fadeIn undefined">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">Henna Mehendi Artistry</h1>
+            <p class="lead mb-5">Traditional &amp; Contemporary Henna Art for All Occasions</p>
+            <a href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#designs" class="btn btn-light btn-lg pulse">Explore Designs</a>
+            <div class="mt-5 floating">
+                <i class="fas fa-hands fa-4x"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Designs Section -->
+    <section id="designs" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title animate__animated animate__fadeInUp undefined">Our Mehendi Designs</h2>
+            <div class="row">
+                <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-1s undefined">
+                    <div class="mehendi-card">
+                        <img src="./Ekta mehandi artistry_files/A7.jpeg" class="card-img-top" alt="Arabic Mehendi Design">
+                        <div class="card-body">
+                            <h5 class="card-title">Arabic Style</h5>
+                            <p class="card-text">Elegant and bold designs with floral motifs and flowing patterns.</p>
+                            <a href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#" class="btn btn-primary">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-2s undefined">
+                    <div class="mehendi-card">
+                        <img src="https://www.thesparklingwedding.com/wp-content/uploads/2024/09/cover_02.jpg" class="card-img-top" alt="Indian Mehendi Design">
+                        <div class="card-body">
+                            <h5 class="card-title">Indian Bridal</h5>
+                            <p class="card-text">Intricate traditional patterns perfect for weddings and celebrations.</p>
+                            <a href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#" class="btn btn-primary">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-3s undefined">
+                    <div class="mehendi-card">
+                        <img src="https://getimgpic.com/wp-content/uploads/2024/11/mehandi-design-heena-design-27.webp" class="card-img-top" alt="Modern Mehendi Design">
+                        <div class="card-body">
+                            <h5 class="card-title">Modern Fusion</h5>
+                            <p class="card-text">Contemporary designs blending traditional elements with modern aesthetics.</p>
+                            <a href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#" class="btn btn-primary">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floral Divider -->
+    <div class="floral-divider">
+        <i class="fas fa-spa"></i>
+        <i class="fas fa-leaf"></i>
+        <i class="fas fa-spa"></i>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 animate__animated animate__fadeInLeft undefined">
+                    <img src="C:\Project\Ekta mehandi artistry_files\Henna_pic.jpg" alt="Mehendi Artist" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInRight undefined">
+                    <h2 class="section-title text-start">About Our Artistry</h2>
+                    <p>Welcome to <span id="siteName2">Ekta Henna Artistry</span>, where we celebrate the ancient art of mehendi with modern creativity. Our skilled artists have years of experience creating beautiful, long-lasting designs for all occasions.</p>
+                    <p>We use only the highest quality natural henna paste, ensuring dark, rich stains that last. Each design is customized to your preferences and applied with meticulous attention to detail.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> 100% Natural Ingredients</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Custom Designs for Every Client</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Professional &amp; Hygienic Application</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Mobile Services Available</li>
+                    </ul>
+                    <a href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#contact" class="btn btn-primary mt-3">Book an Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section -->
+<section id="gallery" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center section-title animate__animated animate__fadeInUp undefined">Our Portfolio</h2>
+        <div class="row g-3">
+            <!-- Gallery Item 1 -->
+            <div class="col-md-4 col-6 animate__animated animate__fadeIn undefined">
+                <a href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://images.unsplash.com/photo-1596704017256-e06a536d3451">
+                    <div class="gallery-item overflow-hidden rounded shadow-sm">
+                        <img src="./Ekta mehandi artistry_files/A5.jpg" class="img-fluid w-100" alt="Mehendi Design">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Gallery Item 2 -->
+            <div class="col-md-4 col-6 animate__animated animate__fadeIn animate__delay-1s undefined">
+                <a href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://images.unsplash.com/photo-1605000797499-95e51f7d2acf">
+                    <div class="gallery-item overflow-hidden rounded shadow-sm">
+                        <img src="https://images.shiksha.com/mediadata/images/articles/1721376888phpcvG7mz.jpeg" class="img-fluid w-100" alt="Mehendi Design">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Gallery Item 3 -->
+            <div class="col-md-4 col-6 animate__animated animate__fadeIn animate__delay-2s undefined">
+                <a href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://images.unsplash.com/photo-1610396662799-a8d49f5c2fa0">
+                    <div class="gallery-item overflow-hidden rounded shadow-sm">
+                        <img src="https://www.weddingplz.com/blog/wp-content/uploads/asma1-819x1024.jpg" class="img-fluid w-100" alt="Mehendi Design">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Gallery Item 4 -->
+            <div class="col-md-4 col-6 animate__animated animate__fadeIn undefined">
+                <a href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://images.unsplash.com/photo-1596703266719-2673f59a6f6b">
+                    <div class="gallery-item overflow-hidden rounded shadow-sm">
+                        <img src="https://getimgpic.com/wp-content/uploads/2024/11/mehandi-design-heena-design-15_1.webp" class="img-fluid w-100" alt="Mehendi Design">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Gallery Item 5 -->
+            <div class="col-md-4 col-6 animate__animated animate__fadeIn animate__delay-1s undefined">
+                <a href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://images.unsplash.com/photo-1596703266719-2673f59a6f6b">
+                    <div class="gallery-item overflow-hidden rounded shadow-sm">
+                        <img src="https://i.pinimg.com/736x/ec/e5/fc/ece5fc61ac379799db6481fdc5e9685e.jpg" class="img-fluid w-100" alt="Mehendi Design">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Gallery Item 6 -->
+            <div class="col-md-4 col-6 animate__animated animate__fadeIn animate__delay-2s undefined">
+                <a href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://images.unsplash.com/photo-1610396662799-a8d49f5c2fa0">
+                    <div class="gallery-item overflow-hidden rounded shadow-sm">
+                        <img src="https://img.freepik.com/premium-photo/womans-hand-with-henna-it_1099697-273.jpg?semt=ais_hybrid&w=740&q=80" class="img-fluid w-100" alt="Mehendi Design">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- View More Button -->
+        <div class="text-center mt-4 animate__animated animate__fadeInUp undefined">
+            <a href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#" class="btn btn-primary">View Full Gallery</a>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Modal -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="file:///C:/Sublime%20Text%203/Mehandi/Project1.html" id="modalImage" class="img-fluid" alt="Enlarged Mehendi Design">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Services/Pricing Section -->
+<section id="services" class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center section-title animate__animated animate__fadeInUp undefined">Our Services</h2>
+        <div class="row">
+            <!-- Service 1 -->
+            <div class="col-md-4 mb-4 animate__animated animate__fadeInUp undefined">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <h4 class="my-0">Bridal Package</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <h2 class="card-title">$120+</h2>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li><i class="fas fa-check text-success me-2"></i>Full hands &amp; feet</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Custom design</li>
+                            <li><i class="fas fa-check text-success me-2"></i>4+ hours session</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Free touch-ups</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Aftercare kit</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="col-md-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s undefined">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <h4 class="my-0">Party Package</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <h2 class="card-title">$60+</h2>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li><i class="fas fa-check text-success me-2"></i>Hands or feet</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Choose from designs</li>
+                            <li><i class="fas fa-check text-success me-2"></i>1-2 hours session</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Group discounts</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Mobile service</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="col-md-4 mb-4 animate__animated animate__fadeInUp animate__delay-2s undefined">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <h4 class="my-0">Custom Design</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <h2 class="card-title">$80+</h2>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li><i class="fas fa-check text-success me-2"></i>Personal consultation</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Unique design</li>
+                            <li><i class="fas fa-check text-success me-2"></i>2-3 hours session</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Digital sketch</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Special occasions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title animate__animated animate__fadeInUp undefined">Client Testimonials</h2>
+            <div class="row">
+                <div class="col-md-4 animate__animated animate__fadeInUp undefined">
+                    <div class="testimonial-card">
+                        <div class="text-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client" class="testimonial-img">
+                        </div>
+                        <p class="text-center"><i class="fas fa-quote-left text-muted me-2"></i>The bridal mehendi was absolutely stunning! So many compliments on my wedding day. The artist was so patient and creative.<i class="fas fa-quote-right text-muted ms-2"></i></p>
+                        <h5 class="text-center mt-3">- Priya Sharma</h5>
+                        <div class="text-center text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-1s undefined">
+                    <div class="testimonial-card">
+                        <div class="text-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="testimonial-img">
+                        </div>
+                        <p class="text-center"><i class="fas fa-quote-left text-muted me-2"></i>I've gotten mehendi done many times, but this was by far the best experience. The design was unique and the stain lasted over 2 weeks!<i class="fas fa-quote-right text-muted ms-2"></i></p>
+                        <h5 class="text-center mt-3">- Aisha Khan</h5>
+                        <div class="text-center text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-2s undefined">
+                    <div class="testimonial-card">
+                        <div class="text-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="testimonial-img">
+                        </div>
+                        <p class="text-center"><i class="fas fa-quote-left text-muted me-2"></i>Perfect for my sister's baby shower! The artist created a beautiful custom design incorporating baby elements. Highly recommend!<i class="fas fa-quote-right text-muted ms-2"></i></p>
+                        <h5 class="text-center mt-3">- Neha Patel</h5>
+                        <div class="text-center text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title animate__animated animate__fadeInUp undefined">Book Your Session</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 animate__animated animate__fadeInUp undefined">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" required="">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="date" class="form-label">Preferred Date</label>
+                                <input type="date" class="form-control" id="date" required="">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="design" class="form-label">Design Preference</label>
+                            <select class="form-select" id="design">
+                                <option selected="">Choose a style</option>
+                                <option>Arabic</option>
+                                <option>Indian Bridal</option>
+                                <option>Modern Fusion</option>
+                                <option>Custom Design</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Special Requests</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit Booking</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <h2 class="mb-4" id="siteName3">Henna Mehandi Artistry</h2>
+            <div class="social-icons mb-4">
+                <a href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#"><i class="fab fa-facebook"></i></a>
+                <a href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#"><i class="fab fa-instagram"></i></a>
+                <a href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#"><i class="fab fa-pinterest"></i></a>
+                <a href="file:///C:/Sublime%20Text%203/Mehandi/Project1.html#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p class="mb-2"><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</p>
+            <p class="mb-4"><i class="fas fa-envelope me-2"></i>info@hennaartistry.com</p>
+            <p class="mb-0">© <span id="year">2025</span> <span id="siteName4">Henna Mehandi Artistry</span>. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Site name variable that can be easily changed
+        const siteName = "Henna Mehandi Artistry";
+        
+        // Set site name in multiple places
+        document.getElementById('siteName').textContent = siteName;
+        document.getElementById('siteName2').textContent = siteName;
+        document.getElementById('siteName3').textContent = siteName;
+        document.getElementById('siteName4').textContent = siteName;
+        
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate__animated');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add(entry.target.dataset.animate);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+        // Gallery Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryModal = document.getElementById('galleryModal');
+    if (galleryModal) {
+        galleryModal.addEventListener('show.bs.modal', function(event) {
+            const button = event.relatedTarget;
+            const imgSrc = button.getAttribute('data-bs-img');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imgSrc;
+        });
+    }
+});
+    </script>
+
+</body></html>
